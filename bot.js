@@ -1,16 +1,17 @@
 // Import modules and variables
 const Discord = require("discord.js");
 const fs = require("fs");
-const prefix = "str:";
 const app = require("http")
+
+// utils
 const PORT = process.env.PORT || 3000;
+const prefix = "str:";
 const bot = new Discord.Client({disableEveryone: true});
-const music = module.require("discord.js-musicbot-addon")
 
-var servers = {};
 
+
+// Read commands
 bot.commands = new Discord.Collection();
-
 fs.readdir("./cmds/", (err, files) => {
     if(err) console.error(err);
 
@@ -37,13 +38,7 @@ bot.on("ready", async () => {
 });
 
 
-music.start(bot, {
-  youtubeKey: 'AIzaSyCgVJ9af60d1olO0ITN9lMZ2zwzhF-nOz8',
-  prefix: prefix,
-  embedColor: `BLUE`,
-  botAdmins: ["142680738645409794"]
-});
-
+// listen for requests
 app.createServer(function (req, res) {
     fs.readFile(__dirname + '/index.html',
         function (err, data) {

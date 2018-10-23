@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
      if(toMute.highestRole.position >= message.member.highestRole.position) return message.channel.sendMessage("You cannot kick a member who is higher or has the same role as you.");
 
      toMute.kick()
-       .then(() => console.log(`Kicked ${ToMute.displayName}`))
+       .then(() => console.log(`Kicked ${toMute.displayName}`))
        .catch(console.error);
      }
 
