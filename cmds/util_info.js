@@ -2,19 +2,12 @@ const Discord = module.require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     let embed = new Discord.RichEmbed()
-           .setTitle("strBot by StringyMusic")
-           .setDescription(
-          "\n\
-Coded in Javascript and discord.js. \n\
-           \n\
-Made by @Stringy6598 \n\
-\n\
-Edited in Github's Atom Code Editor. \n\
-http://atom.io \n\
-          \n\
-Written in Discord.JS. \n\
-http://discord.js.org ")
-
+           .setTitle("string by Stringy#0001")
+           .setDescription("Here is a list of things that were used in the project")
+           .addField("Based on strFrame", "http://github.com/etstringy/strFrame")
+           .addField("Using discord.js", "http://npmjs.com/discord.js")
+           .addField("Using Glitch to host", "http://glitch.com")
+           .addField("Made by Stringy#0001", "DM me if you like the bot!")
            .setColor("#3498db")
        message.channel.sendEmbed(embed);
 

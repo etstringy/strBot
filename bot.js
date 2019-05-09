@@ -7,7 +7,7 @@ const app = require("http")
 const PORT = process.env.PORT || 3000;
 const prefix = "str:";
 const bot = new Discord.Client({disableEveryone: true});
-
+const music = require("discord.js-musicbot-addon")
 
 
 // Read commands
@@ -33,10 +33,19 @@ fs.readdir("./cmds/", (err, files) => {
 
 // API login
 bot.on("ready", async () => {
-    console.log(`strBot build 1.7 - Running - Now with added SQL and reports!`);
-    bot.user.setPresence({ status: 'streaming', game: { name: `${bot.guilds.size} guilds | str:help` } });
+    console.log(`string 2 is now running`);
+    // bot.user.setGame(`around in ${bot.guilds.size} Guilds | str:help`) 
+    bot.user.setActivity(`${bot.guilds.size} guilds | str:help`, { type:"LISTENING" })
 });
 
+music.start(bot, {
+  youtubeKey: process.env.YTKEY,
+  botPrefix: prefix,
+  help: {
+    enabled: false,                     // True/False statement.
+    exclude: true                     // Excludes the command from the help command.
+  }
+});
 
 // listen for requests
 app.createServer(function (req, res) {
