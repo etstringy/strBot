@@ -1,27 +1,12 @@
-Welcome to Glitch
-=================
+# string
+(formerly strBot) A multipurpose discord bot that includes loads of features from memes to moderation.
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+Type ```str:help``` in a server with string in to see modules with commands in them.
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+String is being updated constantly to add new commands quickly and taking suggestions from users! Made by strsft.
 
-Find out more [about Glitch](https://glitch.com/about).
+Currently commands include music, fun commands, commands centred around games and utility commands.
 
+>Made with [Glitch](http://glitch.org)
 
-Your Project
-------------
-
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-
-Made by [Fog Creek](https://fogcreek.com/)
--------------------
-
-\ ゜o゜)ノ
+>Thanks to [DarkoPendragon](https://github.com/DarkoPendragon) for the [music code](https://github.com/DarkoPendragon/discord.js-musicbot-addon)
